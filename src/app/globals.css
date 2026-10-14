@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-cream: #faf8f3;
+  --color-sand: #f1ece2;
+  --color-ink: #1c2a20;
+  --color-ink-soft: #4a5a4f;
+  --color-terracotta: #c9784f;
+
+  --color-leaf-50: #f3f7f1;
+  --color-leaf-100: #e4eedf;
+  --color-leaf-200: #c9dcc1;
+  --color-leaf-300: #a3c398;
+  --color-leaf-400: #78a46c;
+  --color-leaf-500: #56874c;
+  --color-leaf-600: #426c3b;
+  --color-leaf-700: #355531;
+  --color-leaf-800: #2c452a;
+  --color-leaf-900: #243a24;
+  --color-leaf-950: #112011;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  color-scheme: light;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-leaf-200);
 }
